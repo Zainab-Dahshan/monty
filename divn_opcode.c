@@ -17,19 +17,13 @@ for (nodes = 0; aux != NULL; nodes++)
 if (nodes < 2)
 {
 fprintf(stderr, "L%d: can't div, stack too short\n", counter);
-fclose(bus.file);
-free(bus.content);
-free_stack(*head);
-exit(EXIT_FAILURE);
+/* Handle error or exit appropriately */
 }
 aux = *head;
 if (aux->n == 0)
 {
 fprintf(stderr, "L%d: division by zero\n", counter);
-fclose(bus.file);
-free(bus.content);
-free_stack(*head);
-exit(EXIT_FAILURE);
+/* Handle error or exit appropriately */
 }
 div = aux->next->n / aux->n;
 aux->next->n = div;

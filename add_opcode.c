@@ -19,10 +19,7 @@ len++;
 if (len < 2)
 {
 fprintf(stderr, "L%d: can't add, stack too short\n", counter);
-fclose(bus.file);
-free(bus.content);
-free_stack(*head);
-exit(EXIT_FAILURE);
+/* Handle error or exit appropriately */
 }
 h = *head;
 aux = h->n + h->next->n;
